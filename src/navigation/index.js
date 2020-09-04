@@ -14,7 +14,7 @@ import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 enableScreens();
 const Stack = createNativeStackNavigator();
 
-function WalkthroughStack() {
+function NavigationStack() {
   return (
     <Stack.Navigator
       screenOptions={{
@@ -34,13 +34,12 @@ function WalkthroughStack() {
 function RootStack() {
   return (
     <Stack.Navigator
-      initialRouteName="SplashScreen"
       screenOptions={{
         headerShown: false,
         stackPresentation: 'modal',
-        initialRouteName: 'Walkthrough',
+        initialRouteName: 'NavigationStack',
       }}>
-      <Stack.Screen name="Walkthrough" component={WalkthroughStack} />
+      <Stack.Screen name="NavigationStack" component={NavigationStack} />
       <Stack.Screen
         name="ReactNavigationModal"
         component={ReactNavigationModal}
