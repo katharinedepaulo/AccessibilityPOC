@@ -41,7 +41,7 @@ const ScreenWithModal = ({navigation}) => {
   };
 
   const handleSecondItemButton = () => {
-    /* O leitor de telas vai focar no botão do primeiro slide, ja que não mudamos o
+    /* O leitor de telas vai se perder, ja que não mudamos o
     foco para o primeiro item da tela, como no handle do primeiro botão */
     carouselRef.current.snapToPrev();
   };
